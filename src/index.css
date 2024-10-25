@@ -1,13 +1,178 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --midBlue: #1E90FF;
+  --darkBlue: #156FDB;
+  --deepBlue: #20222D;
+  --midPurple: #9C81FE;
+  --darkPurple: #8685FF;
+  --midGreen: #008000;
+  --darkGreen: #006100;
+  --midRed: #FF0000;
+  --darkRed: #CF0000;
+  --midGrey: #939393;
+  --darkGrey: #393939;
+  --almostWhite: #f0f0f0;
+  --onyxBlack: #0f0f0f;
+}
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: var(--almostWhite);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background: var(--onyxBlack) !important;
+  }
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* --- IDs --- */
+
+
+/* --- CLASSES --- */
+
+.primary-link {
+  color: black;
+  font-family: 'Open Sans';
+}
+.primary-link:hover {
+  color: var(--darkBlue);
+}
+
+
+.secondary-link {
+  color: var(--darkGrey);
+  font-family: 'Open Sans';
+  font-size: small;
+}
+.secondary-link:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  .primary-link {
+    color:white;
+  }
+  .primary-link:hover {
+    color: var(--midBlue);
+  }
+
+  .secondary-link {
+    color: var(--midGrey);
+  }
+  .secondary-link:hover {
+    color: white;
+  }
+}
+
+
+.tech-logo {
+  max-width: none !important; /*stops gradient border being 'cut off'*/
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin: 0.25rem;
+  background: var(--almostWhite);
+}
+
+@media (prefers-color-scheme: dark) {
+  .tech-logo {
+    background: var(--onyxBlack);
+  }
+}
+
+.tech-logo-mobile {
+  margin: 0.5rem;
+}
+
+.gradient-border {
+  border-radius: 12px;
+  margin: 2rem;
+  background-image: linear-gradient(-45deg, var(--midBlue), var(--midPurple));
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-out;
+}
+
+@media (min-width: 640px) {
+  .gradient-border {
+    margin: 0.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .gradient-border {
+    margin: 0.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .gradient-border {
+    margin: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .gradient-border {
+    margin: 2rem;
+  }
+}
+
+.gradient-border:hover {
+  transform: rotate(-10deg);
+}
+
+
+/* --- FONTS --- */
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('./fonts/FiraCode-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./fonts/OpenSans-VariableFont_wdth\,wght.ttf');
+}
+
+.font-fira-code {
+  font-family: 'Fira Code';
+}
+
+.font-open-sans {
+  font-family: 'Open Sans';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fira Code';
+}
+
+p {
+  font-family: 'Open Sans';
+}
+
+
+
+
+/* --- ANIMATIONS --- */
+
+
+/* --- MISC --- */
+
+.smooth-change {
+  transition: all 0.1s linear;
 }
