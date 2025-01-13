@@ -15,7 +15,7 @@ export default function Footer() {
     return (
         <div
             id="footer"
-            className="h-44 w-full flex flex-row justify-around px-2 mt-28 dark:bg-onyxBlack dark:text-white">
+            className="h-44 w-full relative flex flex-row justify-around px-2 mt-28 dark:bg-onyxBlack dark:text-white">
                 <ul className="flex flex-col gap-1">
                     <h4 className="mb-1 text-lg">Pages</h4>
                     <Link
@@ -65,7 +65,7 @@ export default function Footer() {
                     <h4 className="mb-1 text-lg text-center">Contact Me</h4>
                     <div className="flex flex-row sm:gap-2 items-center">
                         <a
-                            className="flex items-center justify-center p-2 rounded-full hover:bg-gray-300 dark:hover:bg-deepBlue hover:scale-105 secondary-link transition-all duration-300"
+                            className="flex items-center justify-center p-2 rounded-full hover:bg-gray-300 dark:hover:bg-deepBlue hover:scale-105 focus:bg-gray-300 dark:focus:bg-deepBlue focus:scale-105 transition-all duration-300"
                             href="mailto:dev@dylanbullock.co.uk"
                             rel="noreferrer"
                             target="_blank">
@@ -78,8 +78,10 @@ export default function Footer() {
                             </div>
                         </a>
                         <a
-                            className="flex items-center justify-center p-2 rounded-full hover:bg-gray-300 dark:hover:bg-deepBlue hover:scale-105 secondary-link transition-all duration-300"
-                            href="https://github.com/DylanBk">
+                            className="flex items-center justify-center p-2 rounded-full hover:bg-gray-300 dark:hover:bg-deepBlue hover:scale-105 focus:bg-gray-300 dark:focus:bg-deepBlue focus:scale-105 transition-all duration-300"
+                            href="https://github.com/DylanBk"
+                            rel="noreferrer"
+                            target="_blank">
                             <div className="w-6 sm:w-10">
                                 <picture>
                                     <source srcSet={github_icon_light} media="(prefers-color-scheme: light)" alt="Github Icon"></source>
@@ -89,9 +91,11 @@ export default function Footer() {
                             </div>
                         </a>
                         <a
-                            className="flex items-center justify-center p-2 rounded-full hover:bg-gray-300 dark:hover:bg-deepBlue hover:scale-105 secondary-link transition-all duration-300"
-                            href="https://www.linkedin.com/in/DyIanBk/">
-                            <div className="w-5 sm:w-9">
+                            className="flex items-center justify-center p-2 rounded-full hover:bg-gray-300 dark:hover:bg-deepBlue hover:scale-105 focus:bg-gray-300 dark:focus:bg-deepBlue focus:scale-105 transition-all duration-300"
+                            href="https://www.linkedin.com/in/DyIanBk/"
+                            rel="noreferrer"
+                            target="_blank">
+                            <div className="w-5 sm:w-9 m-1">
                                 <picture>
                                     <source srcSet={linkedin_icon_light} media="(prefers-color-scheme: light)" alt="Linkedin Icon"></source>
                                     <source srcSet={linkedin_icon_dark} media="(prefers-color-scheme: dark)" alt="Linkedin Icon"></source>
@@ -112,6 +116,7 @@ export default function Footer() {
                         </a> */}
                     </div>
                 </ul>
+                <small className="absolute bottom-2 dark:text-gray-300">&copy; Copyright 2025, Dylan Bullock</small>
         </div>
-    )
+    );
 };

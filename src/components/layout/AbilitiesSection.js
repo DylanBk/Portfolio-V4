@@ -22,14 +22,18 @@ export default function AbilitiesSection() {
             <div className="relative flex flex-row items-center px-4 mt-72 sm:mt-52 mb-44 lg:mb-64">
                 <div className="w-full md:w-2/5 xl:w-1/2 p-5 sm::ml-10">
                     <h2 className="text-2xl sm:text-3xl">What can I do?</h2>
-                    <p className="text-sm sm:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p className="mt-3 text-sm sm:text-base text-pretty">
+                        I design and build dynamic, visually stunning, functional, and accessible websites using a diverse range of technologies. I specialise in both front-end and back-end development, utilising tools such as Figma for wireframing and detailed design. While I started with pure HTML and CSS, I now prefer React and vanilla JavaScript with Tailwind CSS for rapid development. For back-end work, I favour Flask for its seamless integration with SQLite or SQLAlchemy, although I also have experience with Express.
+                    </p>
                 </div>
             <TechLogoSection />
         </div> ) : (
             <div className="flex flex-col">
-                <div className="flex flex-col items-center px-8 mt-72 md:mt-52">
+                <div className="flex flex-col items-center px-8 mt-44 md:mt-52">
                     <h2 className="text-center text-2xl sm:text-3xl">What can I do?</h2>
-                    <p className="text-sm sm:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p className="mt-1 text-sm sm:text-base text-center text-pretty">
+                        I design and build dynamic, visually stunning, functional, and accessible websites using a diverse range of technologies. I specialise in both front-end and back-end development, utilising tools such as Figma for wireframing and detailed design. While I started with pure HTML and CSS, I now prefer React and vanilla JavaScript with Tailwind CSS for rapid development. For back-end work, I favour Flask for its seamless integration with SQLite or SQLAlchemy, although I also have experience with Express.
+                    </p>
                 </div>
                 <TechLogoSection />
             </div>

@@ -25,13 +25,13 @@ export default function Home() {
 
                 <div
                     id="slow-type-container"
-                    className="h-full w-fit ml-7 mt-4 sm:mt-8 md:mt-20 xl:mt-40 text-lg md:text-2xl lg:text-3xl xl:text-4xl font-bold dark:text-white select-none smooth-change">
+                    className="h-full w-fit ml-7 mt-4 sm:mt-8 md:mt-20 xl:mt-40 text-lg sm:text-2xl lg:text-3xl xl:text-4xl font-bold dark:text-white select-none smooth-change">
                     <p>Hey there, my name's <span className="text-midBlue">Dylan.</span></p>
                     <p>I'm a <span
                         id="slow-type-section"
-                        className="bg-gradient-to-r from-midBlue to-midPurple bg-clip-text text-transparent"></span>
+                        className="bg-gradient-to-r from-midBlue to-midPurple bg-clip-text font-bold text-transparent"></span>
                     </p>
-                    <p>based in the <span className="text-darkBlue">United Kingdom</span></p>
+                    <p>based in the <span className="text-darkBlue font-bold">United Kingdom</span></p>
                 </div>
 
                 {/* <div
