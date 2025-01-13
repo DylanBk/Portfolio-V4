@@ -22,18 +22,16 @@ export default function Footer() {
                         className="w-fit secondary-link"
                         to="/">
                         Home Page
-                    </Link><Link
+                    </Link>
+                    <Link
                         className="w-fit secondary-link"
                         to="/about">
                         About Me
-                    </Link><Link
+                    </Link>
+                    <Link
                         className="w-fit secondary-link"
                         to="/projects">
                         My Projects
-                    </Link><Link
-                        className="w-fit secondary-link"
-                        to="/">
-                        My Gallery
                     </Link>
                 </ul>
                 <ul className="flex flex-col gap-1">

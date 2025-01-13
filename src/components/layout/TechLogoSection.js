@@ -51,7 +51,7 @@ export default function TechLogoSection() {
     }, [updateLogos]);
 
     return (
-        <div className="bg-almostWhite dark:bg-onyxBlack">
+        <div className="bg-almostWhite dark:bg-onyxBlack select-none">
             {!isScreenWide ? (
                 <div className="flex flex-col items-center mt-10">
                     <div className="flex">
@@ -77,7 +77,7 @@ export default function TechLogoSection() {
                     </div>
                 </div>
             ) : (
-                <div className="w-1/2 absolute top-0 right-12 flex flex-row items-center">
+                <div className="w-1/2 flex flex-row items-center">
                     <div className="flex flex-col">
                         <div className="gradient-border">
                             <img src={logos[0]} alt="HTML5" className="h-16 w-16 tech-logo m-auto" />

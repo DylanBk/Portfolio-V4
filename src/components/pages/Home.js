@@ -34,17 +34,18 @@ export default function Home() {
                     <p>based in the <span className="text-darkBlue font-bold">United Kingdom</span></p>
                 </div>
 
-                {/* <div
+                <div
                     id="download-cv-btn-container"
-                    className="absolute left-1/2 md:left-3/4 top-96 md:top-1/2 flex items-center justify-center -translate-x-1/2 md:translate-x-0 md:-translate-y-1/2 select-none smooth-change">
-                    <div className="h-full w-full absolute left-1/2 top-1/2 -inset-2 rounded-full bg-gradient-to-br from-midBlue to-midPurple blur -translate-x-1/2 -translate-y-1/2 smooth-change"></div>
+                    className="ml-7 mt-28 select-none smooth-change">
                     <a
                         id="download-cv-btn"
-                        className="w-max relative p-4 rounded-full bg-gradient-to-br from-midBlue to-midPurple text-sm sm:text-lg text-onyxBlack font-bold font-fira-code hover:scale-105 smooth-change"
+                        className="p-4 rounded-full bg-gradient-to-br from-midBlue to-midPurple text-sm sm:text-lg text-onyxBlack font-bold font-fira-code hover:scale-105 smooth-change"
                         href="/media/pdfs/CV-Dylan-Bullock.pdf"
                         target="_blank"
-                        download={true}>Download CV</a>
-                </div> */}
+                        download={true}>
+                        Download CV
+                    </a>
+                </div>
 
                 <AbilitiesSection />
                 <ReportBugForm />

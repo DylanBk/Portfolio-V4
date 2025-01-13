@@ -73,22 +73,17 @@ export default function Header() {
                             to="/projects">
                             Projects
                         </Link>
-                        <Link
-                        className="primary-link smooth-change"
-                        to="/gallery">
-                            Gallery
-                        </Link>
                     </nav>
                 ) : (
                     <div>
                         <div className="absolute top-5 right-5 group flex flex-col gap-2 items-center z-20" onClick={handleBurgermenu}>
-                            <div id="line1" className="h-1 w-8 rounded-full bg-white z-20 transition-all duration-300"></div>
-                            <div id="line2" className="h-1 w-8 rounded-full bg-white z-20 transition-all duration-300"></div>
-                            <div id="line3" className="h-1 w-8 rounded-full bg-white z-20 transition-all duration-300"></div>
+                            <div id="line1" className="h-1 w-8 rounded-full bg-black dark:bg-white z-20 transition-all duration-300"></div>
+                            <div id="line2" className="h-1 w-8 rounded-full bg-black dark:bg-white z-20 transition-all duration-300"></div>
+                            <div id="line3" className="h-1 w-8 rounded-full bg-black dark:bg-white z-20 transition-all duration-300"></div>
                         </div>
                         <div
                             id="burgermenu"
-                            className="h-screen w-5/6 absolute top-0 right-0 hidden flex-col gap-10 pl-10 pt-28 bg-deepBlue z-10">
+                            className="h-screen w-5/6 absolute top-0 right-0 hidden flex-col gap-10 pl-10 pt-28 bg-midGrey dark:bg-deepBlue z-10">
                             <Link
                                 className="w-fit primary-link smooth-change"
                                 to="/">
@@ -104,16 +99,9 @@ export default function Header() {
                                 to="/projects">
                                 Projects
                             </Link>
-                            <Link
-                            className="w-fit primary-link smooth-change"
-                            to="/gallery">
-                                Gallery
-                            </Link>
                         </div>
                     </div>
                 )}
-                
-
         </div>
     );
 };

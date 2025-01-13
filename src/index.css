@@ -163,14 +163,24 @@ code {
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  border: solid 2px var(--deepBlue);
+  border: solid 2px var(--darkBlue);
   border-radius: 2rem;
   margin: 2rem auto;
-  background: rgb(32, 34, 45, 20%);
+  background: rgba(21, 110, 219, 5%);
   transition: all 0.1s;
 }
 .project-container:hover {
-  background: rgb(32, 34, 45, 40%);
+  background: rgba(21, 110, 219, 10%);
+}
+
+@media (prefers-color-scheme: dark) {
+  .project-container {
+    border: var(--deepBlue);
+    background: rgb(32, 34, 45, 20%);
+  }
+  .project-container:hover {
+    background: rgb(32, 34, 45, 40%);
+  }
 }
 
 .container-left {
@@ -276,19 +286,29 @@ code {
 .tech-stack p {
   padding: 0.5rem;
   border-radius: 0.75rem;
-  background: var(--deepBlue);
-  color: var(--midPurple);
+  background: var(--darkPurple);
+  color: white;
   cursor: default;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tech-stack p {
+    background: var(--deepBlue);
+    color: var(--midPurple);
+  }
 }
 
 /* PROJECTS LAYOUT MOBILE */
 
 .project-container-mobile {
+  height: auto;
   width: 75%;
   position: relative;
   left: 50%;
   background: #fff;
+  border: solid 2px var(--deepBlue);
   border-radius: 1rem;
+  background: rgb(32, 34, 45, 20%);
   transform: translateX(-50%);
 }
 
@@ -302,6 +322,7 @@ code {
   height: auto;
   width: 100%;
   object-fit: cover;
+  margin-top: 2rem;
 }
 
 .project-cover-overlay-mobile {
@@ -317,6 +338,23 @@ code {
 
 .project-description-mobile {
   padding: 1rem;
+}
+
+.tech-stack-mobile {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.tech-stack-mobile p {
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  background: var(--deepBlue);
+  color: var(--midPurple);
+  cursor: default;
 }
 
 /* PROJECTS LAYOUT DARK */

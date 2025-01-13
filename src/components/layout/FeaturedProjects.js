@@ -115,10 +115,13 @@ export default function FeaturedProjects() {
                     </div>
                 </div>
             ) : (
-                <div className="flex flex-col gap-20 mt-12">
+                <div className="flex flex-col gap-10 mt-12">
                     {window.addEventListener('scroll', handleFocusedProject)}
-                    <div className="project-container-mobile">
-                        <h2 className="project-title-mobile">Bloom Academia</h2>
+                    <div className="project-container">
+                        <div className="!text-center project-title">
+                            <h2>Bloom Academia</h2>
+                            <h3>Self Study Webapp</h3>
+                        </div>
                         <a
                             href="https://github.com/dylanbk/bloom-academia"
                             rel="noreferrer"
@@ -134,10 +137,21 @@ export default function FeaturedProjects() {
                         <p className="text-sm project-description-mobile">
                         Bloom Academia is an innovative educational website where students can independently explore and acquire new skills through self-paced courses created by their peers. Developed as part of a collaborative project with some classmates, I took on the back-end developer role, working closely with the database developer to ensure smooth integration. I also helped complete the front end, assisting in delivering a polished and user-friendly platform.
                         </p>
+                        <div className="tech-stack-mobile">
+                            <p>SQLite</p>
+                            <p>Flask</p>
+                            <p>Jinja</p>
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>Tailwind</p>
+                        </div>
                     </div>
 
-                    <div className="project-container-mobile">
-                        <h2 className="project-title-mobile">Arcadia Library</h2>
+                    <div className="project-container">
+                        <div className="!text-center project-title">
+                            <h2>Arcadia Library</h2>
+                            <h3>Digital Library</h3>
+                        </div>
                         <a
                             href="https://github.com/dylanbk/bloom-academia"
                             rel="noreferrer"
@@ -153,6 +167,14 @@ export default function FeaturedProjects() {
                         <p className="text-sm project-description-mobile">
                         Arcadia Library is a web application similar to an e-commerce platform, users are able to search for books by name or ISBN and check their availability. It offers advanced features like filtering and sorting to simplify finding specific books. Administrators can manage user accounts and inventory, ensuring smooth operations and resource management.
                         </p>
+                        <div className="tech-stack-mobile">
+                            <p>SQLAlchemy</p>
+                            <p>Flask</p>
+                            <p>React</p>
+                            <p>JavaScript</p>
+                            <p>CSS</p>
+                            <p>Tailwind</p>
+                        </div>
                     </div>
                 </div>
             )}
