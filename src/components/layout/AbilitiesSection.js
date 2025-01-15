@@ -20,10 +20,12 @@ export default function AbilitiesSection() {
         <div className="bg-almostWhite dark:bg-onyxBlack text-black dark:text-white">
         {isScreenWide ? (
             <div className="relative flex flex-row items-center ml-4 mt-72 sm:mt-52 mb-44 lg:mb-64">
-                <div className="w-full md:w-2/5 xl:w-1/2 p-5 lg:mr-20 xl:mr-0">
-                    <h2 className="text-2xl sm:text-3xl">What can I do?</h2>
-                    <p className="mt-3 text-sm sm:text-base text-pretty">
-                        I design and build dynamic, visually stunning, functional, and accessible websites using a diverse range of technologies. I specialise in both front-end and back-end development, utilising tools such as Figma for wireframing and detailed design. While I started with pure HTML and CSS, I now prefer React and vanilla JavaScript with Tailwind CSS for rapid development. For back-end work, I favour Flask for its seamless integration with SQLite or SQLAlchemy, although I also have experience with Express.
+                <div className="w-full md:w-5/12 xl:w-1/2 p-5 lg:mr-20 xl:mr-0">
+                    <h2 className="text-2xl sm:text-4xl">What can I do?</h2>
+                    <p className="xl:w-5/6 mt-3 text-sm sm:text-base text-pretty">
+                        As a web developer and designer, I design and build visually stunning websites with a good flow using a diverse range of technologies. I aim to create sites that are dynamic, responsive and eye-catching while maintaining their core functionality.
+                        <br /><br />When designing websites, I use tools such as Figma and draw.io to sketch wireframes and make detailed page designs, to maintain consistency throughout the design I design modular components such as the buttons, links, headings, etc.
+                        <br /><br />As a software developer, I specialise in front-end and back-end development. In the front-end area, I can use HTML, CSS, TailwindCSS, JavaScript, JSX, and React. I prefer to use React in conjunction with Tailwind for rapid development as I can quickly create reusable components. My first programming language was Python so for the back-end I am most proficient with Flask combined with SQLite or SQLAlchemy, although I can also use Express.
                     </p>
                 </div>
             <TechLogoSection />

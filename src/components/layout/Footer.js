@@ -1,9 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import openBugForm from '../../utils/openReportForm';
-import openFeedbackForm from '../../utils/openFeedbackForm';
-
 import email_icon_light from '../../assets/email-light.svg';
 import email_icon_dark from '../../assets/email-dark.svg';
 import github_icon_light from '../../assets/github-light.svg';
@@ -15,7 +12,7 @@ export default function Footer() {
     return (
         <div
             id="footer"
-            className="h-44 w-full relative flex flex-row justify-around px-2 mt-28 dark:bg-onyxBlack dark:text-white">
+            className="h-44 w-full relative flex flex-col sm:flex-row gap-6 sm:gap-0 sm:justify-around px-2 mt-28 dark:bg-onyxBlack dark:text-white">
                 <ul className="flex flex-col gap-1">
                     <h4 className="mb-1 text-lg">Pages</h4>
                     <Link
@@ -48,22 +45,12 @@ export default function Footer() {
                         href="mailto:dev@dylanbullock.co.uk">
                         Send me an e-mail
                     </a>
-                    <button
-                        className="w-fit text-left secondary-link"
-                        onClick={openBugForm}>
-                        Report a bug    
-                    </button>
-                    <button
-                        className="w-fit text-left secondary-link"
-                        onClick={openFeedbackForm}>
-                            Submit feedback
-                    </button>
                 </ul>
                 <ul className="relative flex flex-col gap-1">
-                    <h4 className="mb-1 text-lg text-center">Contact Me</h4>
-                    <div className="flex flex-row sm:gap-2 items-center">
+                    <h4 className="mb-1 text-lg sm:text-center">Contact Me</h4>
+                    <div className="flex flex-row gap-2 items-center">
                         <a
-                            className="flex items-center justify-center p-2 rounded-full hover:bg-gray-300 dark:hover:bg-deepBlue hover:scale-105 focus:bg-gray-300 dark:focus:bg-deepBlue focus:scale-105 transition-all duration-300"
+                            className="flex items-center justify-center sm:p-2 rounded-full hover:bg-gray-300 dark:hover:bg-deepBlue hover:scale-105 focus:bg-gray-300 dark:focus:bg-deepBlue focus:scale-105 transition-all duration-300"
                             href="mailto:dev@dylanbullock.co.uk"
                             rel="noreferrer"
                             target="_blank">
@@ -89,7 +76,7 @@ export default function Footer() {
                             </div>
                         </a>
                         <a
-                            className="flex items-center justify-center p-2 rounded-full hover:bg-gray-300 dark:hover:bg-deepBlue hover:scale-105 focus:bg-gray-300 dark:focus:bg-deepBlue focus:scale-105 transition-all duration-300"
+                            className="flex items-center justify-center sm:p-2 rounded-full hover:bg-gray-300 dark:hover:bg-deepBlue hover:scale-105 focus:bg-gray-300 dark:focus:bg-deepBlue focus:scale-105 transition-all duration-300"
                             href="https://www.linkedin.com/in/DyIanBk/"
                             rel="noreferrer"
                             target="_blank">
@@ -114,7 +101,7 @@ export default function Footer() {
                         </a> */}
                     </div>
                 </ul>
-                <small className="absolute bottom-2 dark:text-gray-300">&copy; Copyright 2025, Dylan Bullock</small>
+                <small className="sm:absolute sm:bottom-2 mx-auto dark:text-gray-300">&copy; Copyright 2025, Dylan Bullock</small>
         </div>
     );
 };

@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 
 import Header from "../layout/Header";
 import AbilitiesSection from "../layout/AbilitiesSection";
-import ReportBugForm from "../layout/ReportBugForm";
 import Footer from "../layout/Footer";
 
 import typingEffect from "../../utils/slowType";
@@ -18,9 +17,7 @@ export default function Home() {
     }, []);
 
     return (
-        <div
-            id="home"
-            className="bg-almostWhite dark:bg-onyxBlack">
+        <div className="flex flex-col bg-almostWhite dark:bg-onyxBlack">
                 <Header />
 
                 <div
@@ -34,21 +31,15 @@ export default function Home() {
                     <p>based in the <span className="text-darkBlue font-bold">United Kingdom</span></p>
                 </div>
 
-                <div
-                    id="download-cv-btn-container"
-                    className="ml-7 mt-28 select-none smooth-change">
-                    <a
-                        id="download-cv-btn"
-                        className="p-4 rounded-full bg-gradient-to-br from-midBlue to-midPurple text-sm sm:text-lg text-onyxBlack font-bold font-fira-code hover:scale-105 smooth-change"
-                        href="/media/pdfs/CV-Dylan-Bullock.pdf"
-                        target="_blank"
-                        download={true}>
-                        Download CV
-                    </a>
-                </div>
+                <a
+                    className="w-fit self-center min-[420px]:self-start p-4 ml-7 mt-28 rounded-full bg-gradient-to-br from-midBlue to-midPurple text-sm sm:text-lg text-almostWhite dark:text-onyxBlack font-bold font-fira-code hover:scale-105 smooth-change"
+                    href="/media/pdfs/CV-Dylan-Bullock.pdf"
+                    target="_blank"
+                    download={true}>
+                    Download CV
+                </a>
 
                 <AbilitiesSection />
-                <ReportBugForm />
                 <Footer />
         </div>
     )

@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 
 export default function TechLogoSection() {
-    // SCREEN SIZE LOGIC
     const [isScreenWide, setIsScreenWide] = useState(window.screen.width > 768);
 
     const handleResize = () => {
@@ -15,7 +14,7 @@ export default function TechLogoSection() {
         };
 }, []);
 
-// LOGO TYPE LOGIC
+
     const [logos, setLogos] = useState([]);
 
     const updateLogos = useCallback((isDark) => { //useCallback stops function from rendering unecessarily by caching it

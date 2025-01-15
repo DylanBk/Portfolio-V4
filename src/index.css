@@ -352,9 +352,16 @@ code {
 .tech-stack-mobile p {
   padding: 0.5rem;
   border-radius: 0.75rem;
-  background: var(--deepBlue);
-  color: var(--midPurple);
+  background: var(--darkPurple);
+  color: white;
   cursor: default;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tech-stack-mobile p {
+    background: var(--deepBlue);
+    color: var(--midPurple);
+  }
 }
 
 /* PROJECTS LAYOUT DARK */
