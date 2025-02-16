@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 
 export default function TechLogoSection() {
-    // SCREEN SIZE LOGIC
     const [isScreenWide, setIsScreenWide] = useState(window.screen.width > 768);
 
     const handleResize = () => {
@@ -13,9 +12,9 @@ export default function TechLogoSection() {
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-}, []);
+    }, []);
 
-// LOGO TYPE LOGIC
+
     const [logos, setLogos] = useState([]);
 
     const updateLogos = useCallback((isDark) => { //useCallback stops function from rendering unecessarily by caching it
@@ -31,27 +30,25 @@ export default function TechLogoSection() {
             "/media/images/sqlite.svg",
         ];
 
-        const themeLogos = isDark
-            ? ["/media/images/express-dark.svg", "/media/images/flask-dark.svg"]
-            : ["/media/images/express-light.svg", "/media/images/flask-light.svg"];
+        const themeLogos = isDark ? ["/media/images/express-dark.svg", "/media/images/flask-dark.svg"] : ["/media/images/express-light.svg", "/media/images/flask-light.svg"];
 
         setLogos([...baseLogos, ...themeLogos]);
     }, []);
 
     useEffect(() => {
-        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        const mq = window.matchMedia("(prefers-color-scheme: dark)");
 
-        updateLogos(mediaQuery.matches);
+        updateLogos(mq.matches);
 
         const handleChange = (e) => updateLogos(e.matches);
 
-        mediaQuery.addEventListener("change", handleChange);
+        mq.addEventListener("change", handleChange);
 
-        return () => mediaQuery.removeEventListener("change", handleChange);
+        return () => mq.removeEventListener("change", handleChange);
     }, [updateLogos]);
 
     return (
-        <div className="bg-almostWhite dark:bg-onyxBlack">
+        <div className="bg-almostWhite dark:bg-onyxBlack select-none">
             {!isScreenWide ? (
                 <div className="flex flex-col items-center mt-10">
                     <div className="flex">
@@ -77,7 +74,7 @@ export default function TechLogoSection() {
                     </div>
                 </div>
             ) : (
-                <div className="w-1/2 absolute top-0 right-12 flex flex-row items-center">
+                <div className="w-1/2 flex flex-row items-center">
                     <div className="flex flex-col">
                         <div className="gradient-border">
                             <img src={logos[0]} alt="HTML5" className="h-16 w-16 tech-logo m-auto" />
@@ -125,4 +122,4 @@ export default function TechLogoSection() {
             )}
         </div>
     );
-}
+};

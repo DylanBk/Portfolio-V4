@@ -22,7 +22,7 @@ module.exports = {
         '18': '4.5rem'
       },
       width: {
-        '18': '4.rem'
+        '18': '4.5rem'
       }
     },
   },
