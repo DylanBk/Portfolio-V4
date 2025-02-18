@@ -47,9 +47,7 @@ export default function Header() {
     };
 
     return (
-        <div
-            id="header"
-            className="h-40 w-full relative flex flex-row items-center shadow-lg select-none smooth-change dark:text-white dark:shadow-none">
+        <header className="h-40 w-full relative flex flex-row items-center shadow-lg select-none smooth-change dark:text-white dark:shadow-none">
                 <Link
                     className="w-full sm:w-fit sm:absolute sm:left-7 mt-10 sm:mt-0 text-3xl lg:text-4xl 2xl:text-5xl text-center smooth-change"
                     to="/">
@@ -76,11 +74,14 @@ export default function Header() {
                     </nav>
                 ) : (
                     <div>
-                        <div className="absolute top-5 right-5 group flex flex-col gap-2 items-center z-20" onClick={handleBurgermenu}>
+                        <button
+                            className="absolute top-5 right-5 group flex flex-col gap-2 items-center z-20"
+                            type="menu"
+                            onClick={handleBurgermenu}>
                             <div id="line1" className="h-1 w-8 rounded-full bg-black dark:bg-white z-20 transition-all duration-300"></div>
                             <div id="line2" className="h-1 w-8 rounded-full bg-black dark:bg-white z-20 transition-all duration-300"></div>
                             <div id="line3" className="h-1 w-8 rounded-full bg-black dark:bg-white z-20 transition-all duration-300"></div>
-                        </div>
+                        </button>
                         <div
                             id="burgermenu"
                             className="h-screen w-5/6 absolute top-0 right-0 hidden flex-col gap-10 pl-10 pt-28 bg-midGrey dark:bg-deepBlue z-10">
@@ -102,6 +103,6 @@ export default function Header() {
                         </div>
                     </div>
                 )}
-        </div>
+        </header>
     );
 };

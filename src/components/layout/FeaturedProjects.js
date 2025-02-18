@@ -59,46 +59,50 @@ export default function FeaturedProjects() {
 
     const Projects = () => {
         return (
-            projects.map((project) => (
-                <section key={project.name} className={`mb-16 project-container ${project.align}`}>
-                    <div className="flex flex-row gap-14">
-                        <div className={`container-${project.align} project-text`}>
-                            <div className={`project-title ${project.align}`}>
-                                <h2>{project.name}</h2>
-                                <h3>{project.summary}</h3>
+            projects.map((project) => {
+                const order = project.align === 'left' ? 'flex-row' : 'flex-row-reverse'
+
+                return (
+                    <section key={project.name} className={`mb-16 project-container ${project.align}`}>
+                        <div className={`flex ${order} gap-14`}>
+                            <div className={`container-left project-text ${project.align}`}>
+                                <div className={`project-title ${project.align}`}>
+                                    <h2 className="-mb-3 text-3xl xl:text-4xl">{project.name}</h2>
+                                    <h3 className="text-xl">{project.summary}</h3>
+                                </div>
+                                <p className={`text-sm xl:text-base project-description ${project.align}`}>
+                                    {project.description}
+                                </p>
                             </div>
-                            <p className={`text-sm xl:text-base project-description ${project.align}`}>
-                                {project.description}
-                            </p>
+                            <a
+                                className={`container-right project-cover right`}
+                                href={project.url}
+                                rel="noreferrer"
+                                target="_blank"
+                                onMouseEnter={handleMouseEnter}
+                                onMouseLeave={handleMouseLeave}>
+                                <img src={project.cover} alt={project.coverAlt} />
+                                <div className="project-cover-overlay" />
+                            </a>
                         </div>
-                        <a
-                            className={`container-${project.align} project-cover ${project.align}`}
-                            href={project.url}
-                            rel="noreferrer"
-                            target="_blank"
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseLeave}>
-                            <img src={project.cover} alt={project.coverAlt} />
-                            <div className="project-cover-overlay" />
-                        </a>
-                    </div>
-                    <ul className="tech-stack">
-                        {project.techStack.map(tech => (
-                            <li key={tech}>{tech}</li>
-                        ))}
-                    </ul>
-                </section>
-            ))
+                        <ul className="tech-stack">
+                            {project.techStack.map(tech => (
+                                <li key={tech}>{tech}</li>
+                            ))}
+                        </ul>
+                    </section>
+                )
+            })
         );
     };
 
     const MobileProjects = () => {
         return (
             projects.map(project => (
-                <section key={project.name} className="project-container">
+                <section key={project.name} className="project-container-mobile">
                     <div className="!text-center project-title">
-                        <h2>{project.name}</h2>
-                        <h3>{project.summary}</h3>
+                        <h2 className="text-3xl">{project.name}</h2>
+                        <h3 className="text-xl">{project.summary}</h3>
                     </div>
                     <a
                         href={project.url}
@@ -106,7 +110,7 @@ export default function FeaturedProjects() {
                         target="_blank">
                         <div className="relative">
                             <img
-                                className="project-cover-mobile"
+                                className="rounded-md project-cover-mobile"
                                 src={project.cover}
                                 alt={project.coverAlt}
                             />
@@ -127,19 +131,19 @@ export default function FeaturedProjects() {
     };
 
     return (
-        <div className="h-max flex flex-col mt-16 text-black dark:text-white">
+        <main className="h-max flex flex-col mt-16 text-black dark:text-white">
 
-            <div className="w-full">
-                <h1 className="w-fit pb-1 border-b-gradient mx-auto text-3xl sm:text-4xl">Featured Projects</h1>
-            </div>
+            <h1 className="w-fit pb-1 border-b-gradient mx-auto text-3xl sm:text-4xl">Featured Projects</h1>
 
             {dimensions > '768' ? (
                 <div className="flex flex-col mt-20">
                     <Projects />
                 </div>
             ) : (
-                <MobileProjects />
+                <div className="flex flex-col gap-10 mt-5" onScroll={handleFocusedProject}>
+                    <MobileProjects />
+                </div>
             )}
-        </div>
+        </main>
     );
 };

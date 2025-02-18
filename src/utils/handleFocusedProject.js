@@ -1,4 +1,5 @@
 export default function handleFocusedProject() {
+    console.log('sjofblksejhbfv')
     const viewportHeight = window.innerHeight;
     const projects = Array.from(document.querySelectorAll('.project-container-mobile'));
     const bounds = [30, 80];
@@ -9,9 +10,13 @@ export default function handleFocusedProject() {
         const isFocused = mid > bounds[0] && mid < bounds[1]; // set isFocused if the midpoint is between the upper/lower bounds
         const overlay = p.querySelector('.project-cover-overlay-mobile');
 
+        console.log(top, bottom, mid, isFocused)
+
         if (isFocused) {
+            console.log('focus')
             overlay.style.opacity = 0;
         } else {
+            console.log('not focus')
             overlay.style.opacity = 0.3;
         };
     });

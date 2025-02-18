@@ -10,10 +10,8 @@ import linkedin_icon_dark from '../../assets/linkedin-dark.svg';
 
 export default function Footer() {
     return (
-        <div
-            id="footer"
-            className="h-44 w-full relative flex flex-col sm:flex-row gap-6 sm:gap-0 sm:justify-around px-2 mt-28 dark:bg-onyxBlack dark:text-white">
-            <ul className="flex flex-col gap-1">
+        <footer className="h-44 w-full relative flex flex-col sm:flex-row gap-6 sm:gap-0 sm:justify-around px-2 mt-28 dark:bg-onyxBlack dark:text-white">
+            <section className="flex flex-col gap-1">
                 <h4 className="mb-1 text-lg">Pages</h4>
                 <Link
                     className="w-fit secondary-link"
@@ -30,8 +28,8 @@ export default function Footer() {
                     to="/projects">
                     My Projects
                 </Link>
-            </ul>
-            <ul className="flex flex-col gap-1">
+            </section>
+            <section className="flex flex-col gap-1">
                 <h4 className="mb-1 text-lg">Resources</h4>
                 <a
                     className="w-fit secondary-link"
@@ -45,8 +43,8 @@ export default function Footer() {
                     href="mailto:dev@dylanbullock.co.uk">
                     Send me an e-mail
                 </a>
-            </ul>
-            <ul className="relative flex flex-col gap-1">
+            </section>
+            <section className="relative flex flex-col gap-1">
                 <h4 className="mb-1 text-lg sm:text-center">Contact Me</h4>
                 <div className="flex flex-row gap-2 items-center">
                     <a
@@ -89,8 +87,8 @@ export default function Footer() {
                         </div>
                     </a>
                 </div>
-            </ul>
+            </section>
             <small className="sm:absolute sm:bottom-2 mx-auto dark:text-gray-300">&copy; Copyright 2025, Dylan Bullock</small>
-        </div>
+        </footer>
     );
 };
