@@ -376,6 +376,8 @@ code {
 @media (prefers-color-scheme: dark) {
   .project-container-mobile,
   .project-description{
+    border: solid 2px var(--deepBlue);
+    background: rgb(32, 34, 45, 20%);
     color: white;
   }
 }
